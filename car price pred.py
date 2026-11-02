@@ -19,7 +19,7 @@ print(df["fuel_type"].value_counts(dropna=False))
 df["accident"] = df["accident"].fillna("Unknown")
 print(df["accident"].value_counts(dropna=False))
 df.drop(columns=["clean_title"], inplace=True)
-print(df.isnull().sum())
+df["Car_Age"] = 2026 -df["model_year"]
 
 
 top10 = df["brand"].value_counts().head(10).index
